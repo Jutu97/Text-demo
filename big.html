@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+ 
+  </style>
+</head>
+<body>
+<script>
+var myObject ={
+  foo:'bar',
+  func:function(){
+    var self = this;
+    console.log(this.foo);
+    console.log(self.foo);
+    (function(){
+      console.log(this.foo);
+      console.log(self.foo)
+    }())
+  }
+}
+console.log(myObject.func())
+</script>
+</body>
+</html>
